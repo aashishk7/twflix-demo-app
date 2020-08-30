@@ -1,0 +1,45 @@
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app
+  labels:
+    app: demo-app
+    release: primary
+spec:
+  selector:
+    matchLabels:
+      app: demo-app
+      release: primary
+  template:
+    metadata:
+      labels:
+        app: demo-app
+        release: primary
+    spec:
+      containers:
+      - name: demo-app
+        image: aashishk7/demo-app:0.0.1
+        env:
+        - name: DB
+          value: demo-app-db
+        - name: VERSION
+          value: "0.0.1"
+        ports:
+        - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+        resources:
+            limits:
+              cpu: 100m
+              memory: 50Mi
+            requests:
+              cpu: 50m
+              memory: 20Mi

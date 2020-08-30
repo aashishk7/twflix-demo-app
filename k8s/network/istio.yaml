@@ -1,0 +1,30 @@
+---
+
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: demo-app
+spec:
+  hosts:
+  - demo-app
+  http:
+  - route:
+    - destination:
+        host: demo-app
+        subset: primary
+        port:
+          number: 80
+
+---
+
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: demo-app
+spec:
+  host: demo-app
+  subsets:
+  - name: primary
+    labels:
+      release: primary
+

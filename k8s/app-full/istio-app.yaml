@@ -1,0 +1,49 @@
+---
+
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: demo-app
+spec:
+  hosts:
+  - demo-app.acme.com
+  - demo-app
+  gateways:
+  - demo-app
+  http:
+  - route:
+    - destination:
+        host: demo-app
+        subset: primary
+        port:
+          number: 80
+
+---
+
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: demo-app
+spec:
+  host: demo-app
+  subsets:
+  - name: primary
+    labels:
+      release: primary
+
+---
+
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: demo-app
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - demo-app.acme.com

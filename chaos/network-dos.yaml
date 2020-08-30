@@ -1,0 +1,50 @@
+version: 1.0.0
+title: What happens if we abort responses
+description: If responses are aborted, the dependant application should retry and/or timeout requests
+tags:
+- k8s
+- pod
+- deployment
+- istio
+configuration:
+  ingress_host:
+      type: env
+      key: INGRESS_HOST
+steady-state-hypothesis:
+  title: The app is healthy
+  probes:
+  - type: probe
+    name: app-responds-to-requests
+    tolerance: 200
+    provider:
+      type: http
+      timeout: 5
+      verify_tls: false
+      url: http://${ingress_host}?addr=http://demo-app/limiter
+      headers:
+        Host: repeater.acme.com
+method:
+- type: action
+  name: abort-failure
+  provider:
+    type: process
+    path: kubectl
+    arguments:
+    - run
+    - siege
+    - --namespace
+    - demo-app
+    - --image
+    - yokogawa/siege
+    - --generator
+    - run-pod/v1
+    - -it
+    - --rm
+    - -- 
+    - --concurrent
+    - 50
+    - --time
+    - 20S
+    - "http://demo-app/limiter"
+  pauses: 
+    after: 5

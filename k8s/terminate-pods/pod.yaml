@@ -1,0 +1,32 @@
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-app
+  labels:
+    app: demo-app
+spec:
+  containers:
+  - name: demo-app
+    image: aashishk7/demo-app:0.0.1
+    env:
+    - name: DB
+      value: demo-app-db
+    ports:
+    - containerPort: 8080
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8080
+    readinessProbe:
+      httpGet:
+        path: /
+        port: 8080
+    resources:
+        limits:
+          cpu: 100m
+          memory: 50Mi
+        requests:
+          cpu: 50m
+          memory: 20Mi

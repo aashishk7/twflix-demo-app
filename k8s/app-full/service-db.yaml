@@ -1,0 +1,18 @@
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-app-db
+  labels:
+    app: demo-app-db
+    release: primary
+spec:
+  type: ClusterIP
+  ports:
+  - name: mongodb
+    port: 27017
+    targetPort: mongodb
+  selector:
+    app: demo-app-db
+    release: primary
