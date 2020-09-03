@@ -1,6 +1,6 @@
 version: 1.0.0
-title: What happens if we abort and delay responses
-description: If responses are aborted and delayed, the dependant application should retry and/or timeout requests
+title: What happens if we delay responses
+description: If responses delayed, the dependant application should timeout the request and retry
 tags:
 - k8s
 - istio
@@ -36,22 +36,6 @@ steady-state-hypothesis:
     ref: app-responds-to-requests
 method:
 - type: action
-  name: abort-failure
-  provider:
-    type: python
-    module: chaosistio.fault.actions
-    func: add_abort_fault
-    arguments:
-      virtual_service_name: demo-app
-      http_status: 500
-      routes:
-        - destination:
-            host: demo-app
-            subset: primary
-      percentage: 50
-      version: networking.istio.io/v1alpha3
-      ns: demo-app
-- type: action
   name: delay
   provider:
     type: python
@@ -64,26 +48,12 @@ method:
         - destination:
             host: demo-app
             subset: primary
-      percentage: 50
+      percentage: 90
       version: networking.istio.io/v1alpha3
       ns: demo-app
   pauses: 
     after: 1
 rollbacks:
-- type: action
-  name: remove-abort-failure
-  provider:
-    type: python
-    func: remove_abort_fault
-    module: chaosistio.fault.actions
-    arguments:
-      virtual_service_name: demo-app
-      routes:
-        - destination:
-            host: demo-app
-            subset: primary
-      version: networking.istio.io/v1alpha3
-      ns: demo-app
 - type: action
   name: remove-delay
   provider:
