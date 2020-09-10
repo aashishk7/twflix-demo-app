@@ -3,9 +3,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: repeater
+  name: netflix-ui
   labels:
-    app: repeater
+    app: netflix-ui
 spec:
   type: ClusterIP
   ports:
@@ -14,4 +14,4 @@ spec:
     protocol: TCP
     name: http
   selector:
-    app: repeater
+    app: netflix-ui

@@ -3,12 +3,12 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: repeater
+  name: netflix-ui
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: repeater
+    name: netflix-ui
   minReplicas: 2
   maxReplicas: 6
   metrics:

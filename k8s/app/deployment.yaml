@@ -3,29 +3,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-app
+  name: netflix-demo
   labels:
-    app: demo-app
+    app: netflix-demo
     release: primary
 spec:
   selector:
     matchLabels:
-      app: demo-app
+      app: netflix-demo
       release: primary
   template:
     metadata:
       labels:
-        app: demo-app
+        app: netflix-demo
         release: primary
     spec:
       containers:
-      - name: demo-app
+      - name: netflix-demo
         image: aashishk7/demo-app:0.0.1
         env:
         - name: DB
-          value: demo-app-db
+          value: netflix-demo-db
         - name: VERSION
-          value: "0.0.1"
+          value: "Netflix Demo Service Success Response"
         ports:
         - containerPort: 8080
         livenessProbe:

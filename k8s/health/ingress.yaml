@@ -3,16 +3,16 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: demo-app
+  name: netflix-demo
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: demo-app.acme.com
+  - host: netflix-demo.acme.com
     http:
       paths:
       - backend:
-          serviceName: demo-app
+          serviceName: netflix-demo
           servicePort: 80
 
 ---
@@ -20,9 +20,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo-app
+  name: netflix-demo
   labels:
-    app: demo-app
+    app: netflix-demo
 spec:
   type: ClusterIP
   ports:
@@ -31,4 +31,4 @@ spec:
     protocol: TCP
     name: http
   selector:
-    app: demo-app
+    app: netflix-demo

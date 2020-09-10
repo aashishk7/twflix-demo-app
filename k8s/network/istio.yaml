@@ -3,14 +3,14 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: demo-app
+  name: netflix-demo
 spec:
   hosts:
-  - demo-app
+  - netflix-demo
   http:
   - route:
     - destination:
-        host: demo-app
+        host: netflix-demo
         subset: primary
         port:
           number: 80
@@ -20,9 +20,9 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: demo-app
+  name: netflix-demo
 spec:
-  host: demo-app
+  host: netflix-demo
   subsets:
   - name: primary
     labels:

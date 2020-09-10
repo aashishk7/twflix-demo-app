@@ -3,16 +3,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: demo-app
+  name: netflix-demo
   labels:
-    app: demo-app
+    app: netflix-demo
 spec:
   containers:
-  - name: demo-app
+  - name: netflix-demo
     image: aashishk7/demo-app:0.0.1
     env:
     - name: DB
-      value: demo-app-db
+      value: netflix-demo-db
     ports:
     - containerPort: 8080
     livenessProbe:

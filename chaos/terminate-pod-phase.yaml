@@ -15,8 +15,8 @@ steady-state-hypothesis:
       func: count_pods
       module: chaosk8s.pod.probes
       arguments:
-        label_selector: app=demo-app
-        ns: demo-app
+        label_selector: app=netflix-demo
+        ns: netflix-demo
   - name: pod-in-phase
     type: probe
     tolerance: true
@@ -25,8 +25,8 @@ steady-state-hypothesis:
       func: pods_in_phase
       module: chaosk8s.pod.probes
       arguments:
-        label_selector: app=demo-app
-        ns: demo-app
+        label_selector: app=netflix-demo
+        ns: netflix-demo
         phase: Running
   - name: pod-in-conditions
     type: probe
@@ -36,8 +36,8 @@ steady-state-hypothesis:
       func: pods_in_conditions
       module: chaosk8s.pod.probes
       arguments:
-        label_selector: app=demo-app
-        ns: demo-app
+        label_selector: app=netflix-demo
+        ns: netflix-demo
         conditions:
         - type: Ready
           status: "True"
@@ -49,8 +49,8 @@ method:
     module: chaosk8s.pod.actions
     func: terminate_pods
     arguments:
-      label_selector: app=demo-app
+      label_selector: app=netflix-demo
       rand: true
-      ns: demo-app
+      ns: netflix-demo
   pauses: 
     after: 10

@@ -16,7 +16,7 @@ steady-state-hypothesis:
       func: all_microservices_healthy
       module: chaosk8s.probes
       arguments:
-        ns: demo-app
+        ns: netflix-demo
 method:
 - type: action
   name: terminate-app-pod
@@ -25,6 +25,6 @@ method:
     module: chaosk8s.pod.actions
     func: terminate_pods
     arguments:
-      label_selector: app=demo-app
+      label_selector: app=netflix-demo
       rand: true
-      ns: demo-app
+      ns: netflix-demo

@@ -3,27 +3,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: repeater
+  name: netflix-ui
   labels:
-    app: repeater
+    app: netflix-ui
     release: primary
 spec:
   selector:
     matchLabels:
-      app: repeater
+      app: netflix-ui
       release: primary
   template:
     metadata:
       labels:
-        app: repeater
+        app: netflix-ui
         release: primary
     spec:
       containers:
-      - name: repeater
+      - name: netflix-ui
         image: aashishk7/demo-repeater:0.0.1
         env:
         - name: VERSION
-          value: "0.0.1"
+          value: "Netflix Demo Service Success Response"
         ports:
         - containerPort: 8080
         livenessProbe:

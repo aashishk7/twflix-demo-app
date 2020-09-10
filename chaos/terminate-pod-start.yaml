@@ -15,8 +15,8 @@ steady-state-hypothesis:
       func: count_pods
       module: chaosk8s.pod.probes
       arguments:
-        label_selector: app=demo-app
-        ns: demo-app
+        label_selector: app=netflix-demo
+        ns: netflix-demo
 method:
 - type: action
   name: terminate-pod
@@ -25,9 +25,9 @@ method:
     module: chaosk8s.pod.actions
     func: terminate_pods
     arguments:
-      label_selector: app=demo-app
+      label_selector: app=netflix-demo
       rand: true
-      ns: demo-app
+      ns: netflix-demo
 rollbacks:
 - type: action
   name: recreate-pod
@@ -37,4 +37,4 @@ rollbacks:
     module: chaosk8s.actions
     arguments:
       spec_path: ./k8s/terminate-pods/pod.yaml
-      ns: demo-app
+      ns: netflix-demo

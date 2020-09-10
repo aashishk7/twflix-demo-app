@@ -13,7 +13,7 @@ spec:
       validDuration: 1s
       overrides:
       - dimensions:
-          destination: repeater
+          destination: netflix-ui
         maxAmount: 5
         validDuration: 1s
 
@@ -53,8 +53,8 @@ spec:
   quotaSpecs:
   - name: request-count
   services:
-  - name: repeater
-    namespace: demo-app
+  - name: netflix-ui
+    namespace: netflix-demo
     #  - service: '*'  # Uncomment this to bind *all* services to request-count
 
 ---

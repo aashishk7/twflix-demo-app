@@ -21,7 +21,7 @@ steady-state-hypothesis:
       verify_tls: false
       url: http://${ingress_host}/demo/person
       headers:
-        Host: demo-app.acme.com
+        Host: netflix-demo.acme.com
 method:
 - type: action
   name: terminate-app-pod
@@ -30,8 +30,8 @@ method:
     module: chaosk8s.pod.actions
     func: terminate_pods
     arguments:
-      label_selector: app=demo-app
+      label_selector: app=netflix-demo
       rand: true
-      ns: demo-app
+      ns: netflix-demo
   pauses: 
     after: 2

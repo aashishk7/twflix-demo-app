@@ -19,9 +19,9 @@ steady-state-hypothesis:
       type: http
       timeout: 15
       verify_tls: false
-      url: http://${ingress_host}?addr=http://demo-app
+      url: http://${ingress_host}?addr=http://netflix-demo
       headers:
-        Host: repeater.acme.com
+        Host: netflix-ui.acme.com
   - type: probe
     tolerance: 200
     ref: app-responds-to-requests
@@ -42,15 +42,15 @@ method:
     module: chaosistio.fault.actions
     func: add_delay_fault
     arguments:
-      virtual_service_name: demo-app
+      virtual_service_name: netflix-demo
       fixed_delay: 15s
       routes:
         - destination:
-            host: demo-app
+            host: netflix-demo
             subset: primary
       percentage: 90
       version: networking.istio.io/v1alpha3
-      ns: demo-app
+      ns: netflix-demo
   pauses: 
     after: 1
 rollbacks:
@@ -61,10 +61,10 @@ rollbacks:
     func: remove_delay_fault
     module: chaosistio.fault.actions
     arguments:
-      virtual_service_name: demo-app
+      virtual_service_name: netflix-demo
       routes:
         - destination:
-            host: demo-app
+            host: netflix-demo
             subset: primary
       version: networking.istio.io/v1alpha3
-      ns: demo-app
+      ns: netflix-demo

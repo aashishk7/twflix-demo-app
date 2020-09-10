@@ -12,6 +12,6 @@ method:
     module: chaosk8s.pod.actions
     func: terminate_pods
     arguments:
-      label_selector: app=demo-app
+      label_selector: app=netflix-demo
       rand: true
-      ns: demo-app
+      ns: netflix-demo

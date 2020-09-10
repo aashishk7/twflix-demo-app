@@ -3,17 +3,17 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: repeater
+  name: netflix-ui
 spec:
   hosts:
-  - repeater.acme.com
-  - repeater
+  - netflix-ui.acme.com
+  - netflix-ui
   gateways:
-  - repeater
+  - netflix-ui
   http:
   - route:
     - destination:
-        host: repeater
+        host: netflix-ui
         subset: primary
         port:
           number: 80
@@ -28,9 +28,9 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: repeater
+  name: netflix-ui
 spec:
-  host: repeater
+  host: netflix-ui
   subsets:
   - name: primary
     labels:
@@ -41,7 +41,7 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: repeater
+  name: netflix-ui
 spec:
   selector:
     istio: ingressgateway
@@ -51,4 +51,4 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - repeater.acme.com
+    - netflix-ui.acme.com
