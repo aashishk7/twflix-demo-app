@@ -1,0 +1,299 @@
+{
+  "chaoslib_version": "1.12.0",
+  "id": "b774e731-9a8a-497f-8fa4-30190a42935d",
+  "target": "istio",
+  "date": "2020-09-03T07:24:29.499054Z",
+  "platform": {
+    "system": "Darwin",
+    "node": "Aashishs-MacBook-Pro.local",
+    "release": "18.7.0",
+    "version": "Darwin Kernel Version 18.7.0: Thu Jun 18 20:50:10 PDT 2020; root:xnu-4903.278.43~1/RELEASE_X86_64",
+    "machine": "x86_64",
+    "proc": "i386",
+    "python": "3.8.5"
+  },
+  "extension": {
+    "name": "chaostoolkit-istio",
+    "version": "0.1.4"
+  },
+  "activities": [
+    {
+      "type": "action",
+      "name": "add_abort_fault",
+      "mod": "chaosistio.fault.actions",
+      "doc": "Abort requests early by the virtual service identified by `name`\n\nSee https://istio.io/docs/reference/config/istio.networking.v1alpha3/#HTTPFaultInjection-Abort",
+      "arguments": [
+        {
+          "name": "virtual_service_name",
+          "type": "string"
+        },
+        {
+          "name": "http_status",
+          "type": "integer"
+        },
+        {
+          "name": "routes",
+          "type": "list"
+        },
+        {
+          "name": "percentage",
+          "default": null,
+          "type": "number"
+        },
+        {
+          "name": "ns",
+          "default": "default",
+          "type": "string"
+        },
+        {
+          "name": "version",
+          "default": "networking.istio.io/v1alpha3",
+          "type": "string"
+        },
+        {
+          "name": "configuration",
+          "default": null,
+          "type": "mapping"
+        },
+        {
+          "name": "secrets",
+          "default": null,
+          "type": "mapping"
+        }
+      ],
+      "return_type": "mapping"
+    },
+    {
+      "type": "action",
+      "name": "add_delay_fault",
+      "mod": "chaosistio.fault.actions",
+      "doc": "Add delay to the virtual service identified by `name`\n\nSee https://istio.io/docs/reference/config/istio.networking.v1alpha3/#HTTPFaultInjection-Delay",
+      "arguments": [
+        {
+          "name": "virtual_service_name",
+          "type": "string"
+        },
+        {
+          "name": "fixed_delay",
+          "type": "string"
+        },
+        {
+          "name": "routes",
+          "type": "list"
+        },
+        {
+          "name": "percentage",
+          "default": null,
+          "type": "number"
+        },
+        {
+          "name": "ns",
+          "default": "default",
+          "type": "string"
+        },
+        {
+          "name": "version",
+          "default": "networking.istio.io/v1alpha3",
+          "type": "string"
+        },
+        {
+          "name": "configuration",
+          "default": null,
+          "type": "mapping"
+        },
+        {
+          "name": "secrets",
+          "default": null,
+          "type": "mapping"
+        }
+      ],
+      "return_type": "mapping"
+    },
+    {
+      "type": "action",
+      "name": "remove_abort_fault",
+      "mod": "chaosistio.fault.actions",
+      "doc": "Remove abort request faults from the virtual service identified by `name`\n\nSee https://istio.io/docs/reference/config/istio.networking.v1alpha3/#HTTPFaultInjection-Abort",
+      "arguments": [
+        {
+          "name": "virtual_service_name",
+          "type": "string"
+        },
+        {
+          "name": "routes",
+          "type": "list"
+        },
+        {
+          "name": "ns",
+          "default": "default",
+          "type": "string"
+        },
+        {
+          "name": "version",
+          "default": "networking.istio.io/v1alpha3",
+          "type": "string"
+        },
+        {
+          "name": "configuration",
+          "default": null,
+          "type": "mapping"
+        },
+        {
+          "name": "secrets",
+          "default": null,
+          "type": "mapping"
+        }
+      ],
+      "return_type": "mapping"
+    },
+    {
+      "type": "action",
+      "name": "remove_delay_fault",
+      "mod": "chaosistio.fault.actions",
+      "doc": "Remove delay from the virtual service identified by `name`\n\nSee https://istio.io/docs/reference/config/istio.networking.v1alpha3/#HTTPFaultInjection-Delay",
+      "arguments": [
+        {
+          "name": "virtual_service_name",
+          "type": "string"
+        },
+        {
+          "name": "routes",
+          "type": "list"
+        },
+        {
+          "name": "ns",
+          "default": "default",
+          "type": "string"
+        },
+        {
+          "name": "version",
+          "default": "networking.istio.io/v1alpha3",
+          "type": "string"
+        },
+        {
+          "name": "configuration",
+          "default": null,
+          "type": "mapping"
+        },
+        {
+          "name": "secrets",
+          "default": null,
+          "type": "mapping"
+        }
+      ],
+      "return_type": "mapping"
+    },
+    {
+      "type": "action",
+      "name": "set_fault",
+      "mod": "chaosistio.fault.actions",
+      "doc": "Setfault injection on the virtual service identified by `name`\n\nThe `fault` argument must be the object passed as the `spec` property\nof a virtual service resource.\n\nIf a fault already exists, it is updated with the new specification.\n\nSee https://istio.io/docs/reference/config/istio.networking.v1alpha3/#HTTPFaultInjection",
+      "arguments": [
+        {
+          "name": "virtual_service_name",
+          "type": "string"
+        },
+        {
+          "name": "routes",
+          "type": "list"
+        },
+        {
+          "name": "fault",
+          "type": "mapping"
+        },
+        {
+          "name": "ns",
+          "default": "default",
+          "type": "string"
+        },
+        {
+          "name": "version",
+          "default": "networking.istio.io/v1alpha3",
+          "type": "string"
+        },
+        {
+          "name": "configuration",
+          "default": null,
+          "type": "mapping"
+        },
+        {
+          "name": "secrets",
+          "default": null,
+          "type": "mapping"
+        }
+      ],
+      "return_type": "mapping"
+    },
+    {
+      "type": "action",
+      "name": "unset_fault",
+      "mod": "chaosistio.fault.actions",
+      "doc": "Unset fault injection from the virtual service identified by `name`\n\nThe `fault` argument must be the object passed as the `spec` property\nof a virtual service resource.\n\nSee https://istio.io/docs/reference/config/istio.networking.v1alpha3/#HTTPFaultInjection",
+      "arguments": [
+        {
+          "name": "virtual_service_name",
+          "type": "string"
+        },
+        {
+          "name": "routes",
+          "type": "list"
+        },
+        {
+          "name": "ns",
+          "default": "default",
+          "type": "string"
+        },
+        {
+          "name": "version",
+          "default": "networking.istio.io/v1alpha3",
+          "type": "string"
+        },
+        {
+          "name": "configuration",
+          "default": null,
+          "type": "mapping"
+        },
+        {
+          "name": "secrets",
+          "default": null,
+          "type": "mapping"
+        }
+      ],
+      "return_type": "mapping"
+    },
+    {
+      "type": "probe",
+      "name": "get_virtual_service",
+      "mod": "chaosistio.fault.probes",
+      "doc": "Get a virtual service identified by `name`\n\nSee https://istio.io/docs/reference/config/istio.networking.v1alpha3/#VirtualService",
+      "arguments": [
+        {
+          "name": "virtual_service_name",
+          "type": "string"
+        },
+        {
+          "name": "ns",
+          "default": "default",
+          "type": "string"
+        },
+        {
+          "name": "version",
+          "default": "networking.istio.io/v1alpha3",
+          "type": "string"
+        },
+        {
+          "name": "configuration",
+          "default": null,
+          "type": "mapping"
+        },
+        {
+          "name": "secrets",
+          "default": null,
+          "type": "mapping"
+        }
+      ],
+      "return_type": "mapping"
+    }
+  ],
+  "system": null
+}

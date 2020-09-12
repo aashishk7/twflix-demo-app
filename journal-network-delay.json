@@ -1,0 +1,411 @@
+{
+  "chaoslib-version": "1.12.0",
+  "platform": "macOS-10.14.6-x86_64-i386-64bit",
+  "node": "Aashishs-MacBook-Pro.local",
+  "experiment": {
+    "version": "1.0.0",
+    "title": "What happens if we delay responses",
+    "description": "If responses delayed, the dependant application should timeout the request and retry",
+    "tags": [
+      "k8s",
+      "istio",
+      "http"
+    ],
+    "configuration": {
+      "ingress_host": {
+        "type": "env",
+        "key": "INGRESS_HOST"
+      }
+    },
+    "steady-state-hypothesis": {
+      "title": "The app is healthy",
+      "probes": [
+        {
+          "type": "probe",
+          "name": "app-responds-to-requests",
+          "tolerance": 200,
+          "provider": {
+            "type": "http",
+            "timeout": 15,
+            "verify_tls": false,
+            "url": "http://${ingress_host}?addr=http://demo-app",
+            "headers": {
+              "Host": "repeater.acme.com"
+            }
+          }
+        },
+        {
+          "type": "probe",
+          "tolerance": 200,
+          "ref": "app-responds-to-requests"
+        },
+        {
+          "type": "probe",
+          "tolerance": 200,
+          "ref": "app-responds-to-requests"
+        },
+        {
+          "type": "probe",
+          "tolerance": 200,
+          "ref": "app-responds-to-requests"
+        },
+        {
+          "type": "probe",
+          "tolerance": 200,
+          "ref": "app-responds-to-requests"
+        }
+      ]
+    },
+    "method": [
+      {
+        "type": "action",
+        "name": "delay",
+        "provider": {
+          "type": "python",
+          "module": "chaosistio.fault.actions",
+          "func": "add_delay_fault",
+          "arguments": {
+            "virtual_service_name": "demo-app",
+            "fixed_delay": "15s",
+            "routes": [
+              {
+                "destination": {
+                  "host": "demo-app",
+                  "subset": "primary"
+                }
+              }
+            ],
+            "percentage": 90,
+            "version": "networking.istio.io/v1alpha3",
+            "ns": "demo-app"
+          }
+        },
+        "pauses": {
+          "after": 1
+        }
+      }
+    ],
+    "rollbacks": [
+      {
+        "type": "action",
+        "name": "remove-delay",
+        "provider": {
+          "type": "python",
+          "func": "remove_delay_fault",
+          "module": "chaosistio.fault.actions",
+          "arguments": {
+            "virtual_service_name": "demo-app",
+            "routes": [
+              {
+                "destination": {
+                  "host": "demo-app",
+                  "subset": "primary"
+                }
+              }
+            ],
+            "version": "networking.istio.io/v1alpha3",
+            "ns": "demo-app"
+          }
+        }
+      }
+    ],
+    "dry": false
+  },
+  "start": "2020-09-04T08:11:29.186493",
+  "status": "failed",
+  "deviated": true,
+  "steady_states": {
+    "before": {
+      "steady_state_met": true,
+      "probes": [
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 15,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://demo-app",
+              "headers": {
+                "Host": "repeater.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Fri, 04 Sep 2020 08:11:29 GMT",
+              "content-length": "33",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "11",
+              "server": "istio-envoy"
+            },
+            "body": "Version: 0.0.1; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-04T08:11:29.187376",
+          "end": "2020-09-04T08:11:29.208880",
+          "duration": 0.021504,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 15,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://demo-app",
+              "headers": {
+                "Host": "repeater.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Fri, 04 Sep 2020 08:11:29 GMT",
+              "content-length": "33",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "5",
+              "server": "istio-envoy"
+            },
+            "body": "Version: 0.0.1; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-04T08:11:29.209226",
+          "end": "2020-09-04T08:11:29.220328",
+          "duration": 0.011102,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 15,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://demo-app",
+              "headers": {
+                "Host": "repeater.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Fri, 04 Sep 2020 08:11:29 GMT",
+              "content-length": "33",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "7",
+              "server": "istio-envoy"
+            },
+            "body": "Version: 0.0.1; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-04T08:11:29.220639",
+          "end": "2020-09-04T08:11:29.234588",
+          "duration": 0.013949,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 15,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://demo-app",
+              "headers": {
+                "Host": "repeater.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Fri, 04 Sep 2020 08:11:29 GMT",
+              "content-length": "33",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "4",
+              "server": "istio-envoy"
+            },
+            "body": "Version: 0.0.1; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-04T08:11:29.235344",
+          "end": "2020-09-04T08:11:29.246278",
+          "duration": 0.010934,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 15,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://demo-app",
+              "headers": {
+                "Host": "repeater.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Fri, 04 Sep 2020 08:11:29 GMT",
+              "content-length": "33",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "10",
+              "server": "istio-envoy"
+            },
+            "body": "Version: 0.0.1; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-04T08:11:29.246616",
+          "end": "2020-09-04T08:11:29.265242",
+          "duration": 0.018626,
+          "tolerance_met": true
+        }
+      ]
+    },
+    "after": {
+      "steady_state_met": false,
+      "probes": [
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 15,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://demo-app",
+              "headers": {
+                "Host": "repeater.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 504,
+            "headers": {
+              "content-length": "24",
+              "content-type": "text/plain",
+              "date": "Fri, 04 Sep 2020 08:11:40 GMT",
+              "server": "istio-envoy"
+            },
+            "body": "upstream request timeout"
+          },
+          "status": "succeeded",
+          "start": "2020-09-04T08:11:30.362662",
+          "end": "2020-09-04T08:11:40.370466",
+          "duration": 10.007804,
+          "tolerance_met": false
+        }
+      ]
+    }
+  },
+  "run": [
+    {
+      "activity": {
+        "type": "action",
+        "name": "delay",
+        "provider": {
+          "type": "python",
+          "module": "chaosistio.fault.actions",
+          "func": "add_delay_fault",
+          "arguments": {
+            "virtual_service_name": "demo-app",
+            "fixed_delay": "15s",
+            "routes": [
+              {
+                "destination": {
+                  "host": "demo-app",
+                  "subset": "primary"
+                }
+              }
+            ],
+            "percentage": 90,
+            "version": "networking.istio.io/v1alpha3",
+            "ns": "demo-app"
+          }
+        },
+        "pauses": {
+          "after": 1
+        }
+      },
+      "output": {
+        "status": 200,
+        "body": {
+          "apiVersion": "networking.istio.io/v1alpha3",
+          "kind": "VirtualService",
+          "metadata": {
+            "annotations": {
+              "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"networking.istio.io/v1alpha3\",\"kind\":\"VirtualService\",\"metadata\":{\"annotations\":{},\"name\":\"demo-app\",\"namespace\":\"demo-app\"},\"spec\":{\"hosts\":[\"demo-app\"],\"http\":[{\"route\":[{\"destination\":{\"host\":\"demo-app\",\"port\":{\"number\":80},\"subset\":\"primary\"}}]}]}}\n"
+            },
+            "creationTimestamp": "2020-09-04T06:47:10Z",
+            "generation": 17,
+            "name": "demo-app",
+            "namespace": "demo-app",
+            "resourceVersion": "157737",
+            "selfLink": "/apis/networking.istio.io/v1alpha3/namespaces/demo-app/virtualservices/demo-app",
+            "uid": "981ff18d-cfa1-4447-a359-e52aeda20346"
+          },
+          "spec": {
+            "hosts": [
+              "demo-app"
+            ],
+            "http": [
+              {
+                "fault": {
+                  "delay": {
+                    "fixedDelay": "15s",
+                    "percentage": {
+                      "value": 90
+                    }
+                  }
+                },
+                "route": [
+                  {
+                    "destination": {
+                      "host": "demo-app",
+                      "port": {
+                        "number": 80
+                      },
+                      "subset": "primary"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "headers": {
+          "Cache-Control": "no-cache, private",
+          "Content-Type": "application/json",
+          "Date": "Fri, 04 Sep 2020 08:11:29 GMT",
+          "Content-Length": "923"
+        }
+      },
+      "status": "succeeded",
+      "start": "2020-09-04T08:11:29.266595",
+      "end": "2020-09-04T08:11:29.358119",
+      "duration": 0.091524
+    }
+  ],
+  "rollbacks": [],
+  "end": "2020-09-04T08:11:40.370787",
+  "duration": 11.198355913162231
+}

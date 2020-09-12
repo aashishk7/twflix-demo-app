@@ -1,0 +1,105 @@
+{
+  "chaoslib-version": "1.12.0",
+  "platform": "macOS-10.14.6-x86_64-i386-64bit",
+  "node": "Aashishs-MacBook-Pro.local",
+  "experiment": {
+    "version": "1.0.0",
+    "title": "What happens if we terminate an instance of the application?",
+    "description": "If an instance of the application is terminated, the applications as a whole should still be operational.",
+    "tags": [
+      "k8s",
+      "pod",
+      "http"
+    ],
+    "configuration": {
+      "ingress_host": {
+        "type": "env",
+        "key": "INGRESS_HOST"
+      }
+    },
+    "steady-state-hypothesis": {
+      "title": "The app is healthy",
+      "probes": [
+        {
+          "name": "app-responds-to-requests",
+          "type": "probe",
+          "tolerance": 200,
+          "provider": {
+            "type": "http",
+            "timeout": 3,
+            "verify_tls": false,
+            "url": "http://${ingress_host}/demo/person",
+            "headers": {
+              "Host": "demo-app.acme.com"
+            }
+          }
+        }
+      ]
+    },
+    "method": [
+      {
+        "type": "action",
+        "name": "terminate-app-pod",
+        "provider": {
+          "type": "python",
+          "module": "chaosk8s.pod.actions",
+          "func": "terminate_pods",
+          "arguments": {
+            "label_selector": "app=demo-app",
+            "rand": true,
+            "ns": "demo-app"
+          }
+        },
+        "pauses": {
+          "after": 2
+        }
+      }
+    ],
+    "dry": false
+  },
+  "start": "2020-09-03T17:13:54.651308",
+  "status": "failed",
+  "deviated": false,
+  "steady_states": {
+    "before": {
+      "steady_state_met": false,
+      "probes": [
+        {
+          "activity": {
+            "name": "app-responds-to-requests",
+            "type": "probe",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 3,
+              "verify_tls": false,
+              "url": "http://${ingress_host}/demo/person",
+              "headers": {
+                "Host": "demo-app.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 404,
+            "headers": {
+              "date": "Thu, 03 Sep 2020 17:13:54 GMT",
+              "server": "istio-envoy",
+              "content-length": "0"
+            },
+            "body": ""
+          },
+          "status": "succeeded",
+          "start": "2020-09-03T17:13:54.652075",
+          "end": "2020-09-03T17:13:54.676660",
+          "duration": 0.024585,
+          "tolerance_met": false
+        }
+      ]
+    },
+    "after": null
+  },
+  "run": [],
+  "rollbacks": [],
+  "end": "2020-09-03T17:13:54.676971",
+  "duration": 0.03825187683105469
+}

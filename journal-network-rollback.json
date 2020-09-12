@@ -1,0 +1,614 @@
+{
+  "chaoslib-version": "1.12.0",
+  "platform": "macOS-10.14.6-x86_64-i386-64bit",
+  "node": "Aashishs-MacBook-Pro.local",
+  "experiment": {
+    "version": "1.0.0",
+    "title": "What happens if we abort responses",
+    "description": "If responses are aborted, the dependant application should retry and/or timeout requests",
+    "tags": [
+      "k8s",
+      "istio",
+      "http"
+    ],
+    "configuration": {
+      "ingress_host": {
+        "type": "env",
+        "key": "INGRESS_HOST"
+      }
+    },
+    "steady-state-hypothesis": {
+      "title": "The app is healthyd",
+      "probes": [
+        {
+          "type": "probe",
+          "name": "app-responds-to-requests",
+          "tolerance": 200,
+          "provider": {
+            "type": "http",
+            "timeout": 5,
+            "verify_tls": false,
+            "url": "http://${ingress_host}?addr=http://twflix-microservice",
+            "headers": {
+              "Host": "twflix-ui.acme.com"
+            }
+          }
+        },
+        {
+          "type": "probe",
+          "tolerance": 200,
+          "ref": "app-responds-to-requests"
+        },
+        {
+          "type": "probe",
+          "tolerance": 200,
+          "ref": "app-responds-to-requests"
+        },
+        {
+          "type": "probe",
+          "tolerance": 200,
+          "ref": "app-responds-to-requests"
+        },
+        {
+          "type": "probe",
+          "tolerance": 200,
+          "ref": "app-responds-to-requests"
+        }
+      ]
+    },
+    "method": [
+      {
+        "type": "action",
+        "name": "abort-failure",
+        "provider": {
+          "type": "python",
+          "module": "chaosistio.fault.actions",
+          "func": "add_abort_fault",
+          "arguments": {
+            "virtual_service_name": "twflix-microservice",
+            "http_status": 500,
+            "routes": [
+              {
+                "destination": {
+                  "host": "twflix-microservice",
+                  "subset": "primary"
+                }
+              }
+            ],
+            "percentage": 50,
+            "version": "networking.istio.io/v1alpha3",
+            "ns": "twflix-microservice"
+          }
+        },
+        "pauses": {
+          "after": 1
+        }
+      }
+    ],
+    "rollbacks": [
+      {
+        "type": "action",
+        "name": "remove-abort-failure",
+        "provider": {
+          "type": "python",
+          "func": "remove_abort_fault",
+          "module": "chaosistio.fault.actions",
+          "arguments": {
+            "virtual_service_name": "twflix-microservice",
+            "routes": [
+              {
+                "destination": {
+                  "host": "twflix-microservice",
+                  "subset": "primary"
+                }
+              }
+            ],
+            "version": "networking.istio.io/v1alpha3",
+            "ns": "twflix-microservice"
+          }
+        }
+      }
+    ],
+    "dry": false
+  },
+  "start": "2020-09-12T11:21:51.951655",
+  "status": "completed",
+  "deviated": false,
+  "steady_states": {
+    "before": {
+      "steady_state_met": true,
+      "probes": [
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 5,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://twflix-microservice",
+              "headers": {
+                "Host": "twflix-ui.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Sat, 12 Sep 2020 11:21:51 GMT",
+              "content-length": "91",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "3",
+              "server": "istio-envoy"
+            },
+            "body": "Version: Hello , This is TwFlix Micro-service responding with 200 Status; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-12T11:21:51.952332",
+          "end": "2020-09-12T11:21:51.961367",
+          "duration": 0.009035,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 5,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://twflix-microservice",
+              "headers": {
+                "Host": "twflix-ui.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Sat, 12 Sep 2020 11:21:51 GMT",
+              "content-length": "91",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "3",
+              "server": "istio-envoy"
+            },
+            "body": "Version: Hello , This is TwFlix Micro-service responding with 200 Status; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-12T11:21:51.961717",
+          "end": "2020-09-12T11:21:51.969720",
+          "duration": 0.008003,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 5,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://twflix-microservice",
+              "headers": {
+                "Host": "twflix-ui.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Sat, 12 Sep 2020 11:21:51 GMT",
+              "content-length": "91",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "3",
+              "server": "istio-envoy"
+            },
+            "body": "Version: Hello , This is TwFlix Micro-service responding with 200 Status; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-12T11:21:51.969970",
+          "end": "2020-09-12T11:21:51.977509",
+          "duration": 0.007539,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 5,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://twflix-microservice",
+              "headers": {
+                "Host": "twflix-ui.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Sat, 12 Sep 2020 11:21:51 GMT",
+              "content-length": "91",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "8",
+              "server": "istio-envoy"
+            },
+            "body": "Version: Hello , This is TwFlix Micro-service responding with 200 Status; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-12T11:21:51.977747",
+          "end": "2020-09-12T11:21:51.993173",
+          "duration": 0.015426,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 5,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://twflix-microservice",
+              "headers": {
+                "Host": "twflix-ui.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Sat, 12 Sep 2020 11:21:52 GMT",
+              "content-length": "91",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "10",
+              "server": "istio-envoy"
+            },
+            "body": "Version: Hello , This is TwFlix Micro-service responding with 200 Status; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-12T11:21:51.993526",
+          "end": "2020-09-12T11:21:52.010251",
+          "duration": 0.016725,
+          "tolerance_met": true
+        }
+      ]
+    },
+    "after": {
+      "steady_state_met": true,
+      "probes": [
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 5,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://twflix-microservice",
+              "headers": {
+                "Host": "twflix-ui.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Sat, 12 Sep 2020 11:21:53 GMT",
+              "content-length": "91",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "8",
+              "server": "istio-envoy"
+            },
+            "body": "Version: Hello , This is TwFlix Micro-service responding with 200 Status; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-12T11:21:53.074917",
+          "end": "2020-09-12T11:21:53.088548",
+          "duration": 0.013631,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 5,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://twflix-microservice",
+              "headers": {
+                "Host": "twflix-ui.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Sat, 12 Sep 2020 11:21:53 GMT",
+              "content-length": "91",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "4",
+              "server": "istio-envoy"
+            },
+            "body": "Version: Hello , This is TwFlix Micro-service responding with 200 Status; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-12T11:21:53.088788",
+          "end": "2020-09-12T11:21:53.097044",
+          "duration": 0.008256,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 5,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://twflix-microservice",
+              "headers": {
+                "Host": "twflix-ui.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Sat, 12 Sep 2020 11:21:53 GMT",
+              "content-length": "91",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "3",
+              "server": "istio-envoy"
+            },
+            "body": "Version: Hello , This is TwFlix Micro-service responding with 200 Status; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-12T11:21:53.097306",
+          "end": "2020-09-12T11:21:53.104801",
+          "duration": 0.007495,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 5,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://twflix-microservice",
+              "headers": {
+                "Host": "twflix-ui.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Sat, 12 Sep 2020 11:21:53 GMT",
+              "content-length": "91",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "102",
+              "server": "istio-envoy"
+            },
+            "body": "Version: Hello , This is TwFlix Micro-service responding with 200 Status; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-12T11:21:53.105121",
+          "end": "2020-09-12T11:21:53.212355",
+          "duration": 0.107234,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "app-responds-to-requests",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": 5,
+              "verify_tls": false,
+              "url": "http://${ingress_host}?addr=http://twflix-microservice",
+              "headers": {
+                "Host": "twflix-ui.acme.com"
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "date": "Sat, 12 Sep 2020 11:21:53 GMT",
+              "content-length": "91",
+              "content-type": "text/plain; charset=utf-8",
+              "x-envoy-upstream-service-time": "5",
+              "server": "istio-envoy"
+            },
+            "body": "Version: Hello , This is TwFlix Micro-service responding with 200 Status; Release: unknown\n"
+          },
+          "status": "succeeded",
+          "start": "2020-09-12T11:21:53.212688",
+          "end": "2020-09-12T11:21:53.223512",
+          "duration": 0.010824,
+          "tolerance_met": true
+        }
+      ]
+    }
+  },
+  "run": [
+    {
+      "activity": {
+        "type": "action",
+        "name": "abort-failure",
+        "provider": {
+          "type": "python",
+          "module": "chaosistio.fault.actions",
+          "func": "add_abort_fault",
+          "arguments": {
+            "virtual_service_name": "twflix-microservice",
+            "http_status": 500,
+            "routes": [
+              {
+                "destination": {
+                  "host": "twflix-microservice",
+                  "subset": "primary"
+                }
+              }
+            ],
+            "percentage": 50,
+            "version": "networking.istio.io/v1alpha3",
+            "ns": "twflix-microservice"
+          }
+        },
+        "pauses": {
+          "after": 1
+        }
+      },
+      "output": {
+        "status": 200,
+        "body": {
+          "apiVersion": "networking.istio.io/v1alpha3",
+          "kind": "VirtualService",
+          "metadata": {
+            "annotations": {
+              "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"networking.istio.io/v1alpha3\",\"kind\":\"VirtualService\",\"metadata\":{\"annotations\":{},\"name\":\"twflix-microservice\",\"namespace\":\"twflix-microservice\"},\"spec\":{\"hosts\":[\"twflix-microservice\"],\"http\":[{\"route\":[{\"destination\":{\"host\":\"twflix-microservice\",\"port\":{\"number\":80},\"subset\":\"primary\"}}]}]}}\n"
+            },
+            "creationTimestamp": "2020-09-12T10:49:34Z",
+            "generation": 8,
+            "name": "twflix-microservice",
+            "namespace": "twflix-microservice",
+            "resourceVersion": "368008",
+            "selfLink": "/apis/networking.istio.io/v1alpha3/namespaces/twflix-microservice/virtualservices/twflix-microservice",
+            "uid": "a01494bf-7a4c-4dbb-8446-c9f3ae38a655"
+          },
+          "spec": {
+            "hosts": [
+              "twflix-microservice"
+            ],
+            "http": [
+              {
+                "fault": {
+                  "abort": {
+                    "httpStatus": 500,
+                    "percentage": {
+                      "value": 50
+                    }
+                  }
+                },
+                "route": [
+                  {
+                    "destination": {
+                      "host": "twflix-microservice",
+                      "port": {
+                        "number": 80
+                      },
+                      "subset": "primary"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "headers": {
+          "Cache-Control": "no-cache, private",
+          "Content-Type": "application/json",
+          "Date": "Sat, 12 Sep 2020 11:21:52 GMT",
+          "Content-Length": "1030"
+        }
+      },
+      "status": "succeeded",
+      "start": "2020-09-12T11:21:52.010649",
+      "end": "2020-09-12T11:21:52.073886",
+      "duration": 0.063237
+    }
+  ],
+  "rollbacks": [
+    {
+      "activity": {
+        "type": "action",
+        "name": "remove-abort-failure",
+        "provider": {
+          "type": "python",
+          "func": "remove_abort_fault",
+          "module": "chaosistio.fault.actions",
+          "arguments": {
+            "virtual_service_name": "twflix-microservice",
+            "routes": [
+              {
+                "destination": {
+                  "host": "twflix-microservice",
+                  "subset": "primary"
+                }
+              }
+            ],
+            "version": "networking.istio.io/v1alpha3",
+            "ns": "twflix-microservice"
+          }
+        }
+      },
+      "output": {
+        "status": 200,
+        "body": {
+          "apiVersion": "networking.istio.io/v1alpha3",
+          "kind": "VirtualService",
+          "metadata": {
+            "annotations": {
+              "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"networking.istio.io/v1alpha3\",\"kind\":\"VirtualService\",\"metadata\":{\"annotations\":{},\"name\":\"twflix-microservice\",\"namespace\":\"twflix-microservice\"},\"spec\":{\"hosts\":[\"twflix-microservice\"],\"http\":[{\"route\":[{\"destination\":{\"host\":\"twflix-microservice\",\"port\":{\"number\":80},\"subset\":\"primary\"}}]}]}}\n"
+            },
+            "creationTimestamp": "2020-09-12T10:49:34Z",
+            "generation": 9,
+            "name": "twflix-microservice",
+            "namespace": "twflix-microservice",
+            "resourceVersion": "368013",
+            "selfLink": "/apis/networking.istio.io/v1alpha3/namespaces/twflix-microservice/virtualservices/twflix-microservice",
+            "uid": "a01494bf-7a4c-4dbb-8446-c9f3ae38a655"
+          },
+          "spec": {
+            "hosts": [
+              "twflix-microservice"
+            ],
+            "http": [
+              {
+                "route": [
+                  {
+                    "destination": {
+                      "host": "twflix-microservice",
+                      "port": {
+                        "number": 80
+                      },
+                      "subset": "primary"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "headers": {
+          "Cache-Control": "no-cache, private",
+          "Content-Type": "application/json",
+          "Date": "Sat, 12 Sep 2020 11:21:53 GMT",
+          "Content-Length": "967"
+        }
+      },
+      "status": "succeeded",
+      "start": "2020-09-12T11:21:53.224182",
+      "end": "2020-09-12T11:21:53.281501",
+      "duration": 0.057319
+    }
+  ],
+  "end": "2020-09-12T11:21:53.281636",
+  "duration": 1.3417749404907227
+}
