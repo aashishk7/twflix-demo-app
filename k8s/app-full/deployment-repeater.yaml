@@ -3,27 +3,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: netflix-ui
+  name: twflix-ui
   labels:
-    app: netflix-ui
+    app: twflix-ui
     release: primary
 spec:
   selector:
     matchLabels:
-      app: netflix-ui
+      app: twflix-ui
       release: primary
   template:
     metadata:
       labels:
-        app: netflix-ui
+        app: twflix-ui
         release: primary
     spec:
       containers:
-      - name: netflix-ui
+      - name: twflix-ui
         image: aashishk7/demo-repeater:0.0.1
         env:
         - name: VERSION
-          value: "Netflix Demo Service Success Response"
+          value: "Hello , This is TwFlix Micro-service responding with 200 Status"
         ports:
         - containerPort: 8080
         livenessProbe:

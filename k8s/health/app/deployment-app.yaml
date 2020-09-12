@@ -3,29 +3,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: netflix-demo
+  name: twflix-microservice
   labels:
-    app: netflix-demo
+    app: twflix-microservice
     release: primary
 spec:
   selector:
     matchLabels:
-      app: netflix-demo
+      app: twflix-microservice
       release: primary
   template:
     metadata:
       labels:
-        app: netflix-demo
+        app: twflix-microservice
         release: primary
     spec:
       containers:
-      - name: netflix-demo
+      - name: twflix-microservice
         image: aashishk7/demo-app:0.0.1
         env:
         - name: DB
-          value: netflix-demo-db
+          value: twflix-microservice-db
         - name: VERSION
-          value: "Netflix Demo Service Success Response"
+          value: "Hello , This is TwFlix Micro-service responding with 200 Status"
         ports:
         - containerPort: 8080
         livenessProbe:

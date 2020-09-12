@@ -21,7 +21,7 @@ steady-state-hypothesis:
       verify_tls: false
       url: http://${ingress_host}/demo/person
       headers:
-        Host: netflix-demo.acme.com
+        Host: twflix-microservice.acme.com
 method:
 - type: action
   name: terminate-app-pod
@@ -30,9 +30,9 @@ method:
     module: chaosk8s.pod.actions
     func: terminate_pods
     arguments:
-      label_selector: app=netflix-demo
+      label_selector: app=twflix-microservice
       rand: true
-      ns: netflix-demo
+      ns: twflix-microservice
   pauses:
     after: 2
 steady-state-hypothesis:
@@ -45,9 +45,9 @@ steady-state-hypothesis:
       type: http
       timeout: 10
       verify_tls: false
-      url: http://${ingress_host}?addr=http://netflix-demo
+      url: http://${ingress_host}?addr=http://twflix-microservice
       headers:
-        Host: netflix-ui.acme.com
+        Host: twflix-ui.acme.com
   - type: probe
     tolerance: 200
     ref: app-responds-to-requests
@@ -68,15 +68,15 @@ method:
     module: chaosistio.fault.actions
     func: add_abort_fault
     arguments:
-      virtual_service_name: netflix-demo
+      virtual_service_name: twflix-microservice
       http_status: 500
       routes:
         - destination:
-            host: netflix-demo
+            host: twflix-microservice
             subset: primary
       percent: 50
       version: networking.istio.io/v1alpha3
-      ns: netflix-demo
+      ns: twflix-microservice
 - type: action
   name: delay
   provider:
@@ -84,15 +84,15 @@ method:
     module: chaosistio.fault.actions
     func: add_delay_fault
     arguments:
-      virtual_service_name: netflix-demo
+      virtual_service_name: twflix-microservice
       fixed_delay: 15s
       routes:
         - destination:
-            host: netflix-demo
+            host: twflix-microservice
             subset: primary
       percent: 50
       version: networking.istio.io/v1alpha3
-      ns: netflix-demo
+      ns: twflix-microservice
   pauses:
     after: 1
 rollbacks:
@@ -103,13 +103,13 @@ rollbacks:
     func: remove_abort_fault
     module: chaosistio.fault.actions
     arguments:
-      virtual_service_name: netflix-demo
+      virtual_service_name: twflix-microservice
       routes:
         - destination:
-            host: netflix-demo
+            host: twflix-microservice
             subset: primary
       version: networking.istio.io/v1alpha3
-      ns: netflix-demo
+      ns: twflix-microservice
 - type: action
   name: remove-delay
   provider:
@@ -117,10 +117,10 @@ rollbacks:
     func: remove_delay_fault
     module: chaosistio.fault.actions
     arguments:
-      virtual_service_name: netflix-demo
+      virtual_service_name: twflix-microservice
       routes:
         - destination:
-            host: netflix-demo
+            host: twflix-microservice
             subset: primary
       version: networking.istio.io/v1alpha3
-      ns: netflix-demo
+      ns: twflix-microservice

@@ -3,17 +3,17 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: netflix-demo
+  name: twflix-microservice
 spec:
   hosts:
-  - netflix-demo.acme.com
-  - netflix-demo
+  - twflix-microservice.acme.com
+  - twflix-microservice
   gateways:
-  - netflix-demo
+  - twflix-microservice
   http:
   - route:
     - destination:
-        host: netflix-demo
+        host: twflix-microservice
         subset: primary
         port:
           number: 80
@@ -23,9 +23,9 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: netflix-demo
+  name: twflix-microservice
 spec:
-  host: netflix-demo
+  host: twflix-microservice
   subsets:
   - name: primary
     labels:
@@ -36,7 +36,7 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: netflix-demo
+  name: twflix-microservice
 spec:
   selector:
     istio: ingressgateway
@@ -46,4 +46,4 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - netflix-demo.acme.com
+    - twflix-microservice.acme.com

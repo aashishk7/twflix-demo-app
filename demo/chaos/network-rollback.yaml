@@ -19,9 +19,9 @@ steady-state-hypothesis:
       type: http
       timeout: 5
       verify_tls: false
-      url: http://${ingress_host}?addr=http://netflix-demo
+      url: http://${ingress_host}?addr=http://twflix-microservice
       headers:
-        Host: netflix-ui.acme.com
+        Host: twflix-ui.acme.com
   - type: probe
     tolerance: 200
     ref: app-responds-to-requests
@@ -42,15 +42,15 @@ method:
     module: chaosistio.fault.actions
     func: add_abort_fault
     arguments:
-      virtual_service_name: netflix-demo
+      virtual_service_name: twflix-microservice
       http_status: 500
       routes:
         - destination:
-            host: netflix-demo
+            host: twflix-microservice
             subset: primary
       percentage: 50
       version: networking.istio.io/v1alpha3
-      ns: netflix-demo
+      ns: twflix-microservice
   pauses: 
     after: 1
 rollbacks:
@@ -61,10 +61,10 @@ rollbacks:
     func: remove_abort_fault
     module: chaosistio.fault.actions
     arguments:
-      virtual_service_name: netflix-demo
+      virtual_service_name: twflix-microservice
       routes:
         - destination:
-            host: netflix-demo
+            host: twflix-microservice
             subset: primary
       version: networking.istio.io/v1alpha3
-      ns: netflix-demo
+      ns: twflix-microservice

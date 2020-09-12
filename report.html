@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2020-09-12" />
+  <title>Chaos Engineering Report</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}</style>
+  <style type="text/css">
+html {
+color: #222;
+font-size: 1em;
+line-height: 1.4;
+}
+::-moz-selection {
+background: #b3d4fc;
+text-shadow: none;
+}
+::selection {
+background: #b3d4fc;
+text-shadow: none;
+}
+hr {
+display: block;
+height: 1px;
+border: 0;
+border-top: 1px solid #ccc;
+margin: 1em 0;
+padding: 0;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+vertical-align: middle;
+}
+fieldset {
+border: 0;
+margin: 0;
+padding: 0;
+}
+textarea {
+resize: vertical;
+}
+.browserupgrade {
+margin: 0.2em 0;
+background: #ccc;
+color: #000;
+padding: 0.2em 0;
+}
+
+
+@media only screen and (min-width: 35em) {
+}
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+}
+
+.hidden {
+display: none !important;
+visibility: hidden;
+}
+.visuallyhidden {
+border: 0;
+clip: rect(0 0 0 0);
+height: 1px;
+margin: -1px;
+overflow: hidden;
+padding: 0;
+position: absolute;
+width: 1px;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+clip: auto;
+height: auto;
+margin: 0;
+overflow: visible;
+position: static;
+width: auto;
+}
+.invisible {
+visibility: hidden;
+}
+.clearfix:before,
+.clearfix:after {
+content: " ";
+display: table;
+}
+.clearfix:after {
+clear: both;
+}
+.clearfix {
+*zoom: 1;
+}
+
+@media print {
+*,
+*:before,
+*:after {
+background: transparent !important;
+color: #000 !important;
+box-shadow: none !important;
+text-shadow: none !important;
+}
+a,
+a:visited {
+text-decoration: underline;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+a[href^="#"]:after,
+a[href^="javascript:"]:after {
+content: "";
+}
+pre,
+blockquote {
+border: 1px solid #999;
+page-break-inside: avoid;
+}
+thead {
+display: table-header-group;
+}
+tr,
+img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+p,
+h2,
+h3 {
+orphans: 3;
+widows: 3;
+}
+h2,
+h3 {
+page-break-after: avoid;
+}
+}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">Chaos Engineering Report</h1>
+<p class="date">12 September 2020</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#experiment">Experiment</a><ul>
+<li><a href="#what-happens-if-we-abort-responses">What happens if we abort responses</a><ul>
+<li><a href="#summary-1">Summary</a></li>
+<li><a href="#definition">Definition</a></li>
+<li><a href="#result">Result</a></li>
+<li><a href="#appendix">Appendix</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+<h1 id="summary">Summary</h1>
+<p>This report aggregates 1 experiments spanning over the following subjects:</p>
+<p><em>k8s</em>, <em>http</em>, <em>istio</em></p>
+
+<h1 id="experiment">Experiment</h1>
+<h2 id="what-happens-if-we-abort-responses">What happens if we abort responses</h2>
+<p>If responses are aborted, the dependant application should retry and/or timeout requests</p>
+<h3 id="summary-1">Summary</h3>
+<p>What happens if we abort responses</p>
+<p>If responses are aborted, the dependant application should retry and/or timeout requests</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Status</strong></td>
+<td>completed</td>
+</tr>
+<tr class="even">
+<td><strong>Tagged</strong></td>
+<td>k8s, istio, http</td>
+</tr>
+<tr class="odd">
+<td><strong>Executed From</strong></td>
+<td>Aashishs-MacBook-Pro.local</td>
+</tr>
+<tr class="even">
+<td><strong>Platform</strong></td>
+<td>macOS-10.14.6-x86_64-i386-64bit</td>
+</tr>
+<tr class="odd">
+<td><strong>Started</strong></td>
+<td>Sat, 12 Sep 2020 11:21:51 GMT</td>
+</tr>
+<tr class="even">
+<td><strong>Completed</strong></td>
+<td>Sat, 12 Sep 2020 11:21:53 GMT</td>
+</tr>
+<tr class="odd">
+<td><strong>Duration</strong></td>
+<td>2 seconds</td>
+</tr>
+</tbody>
+</table>
+<h3 id="definition">Definition</h3>
+<p>The experiment was made of 1 actions, to vary conditions in your system, and 0 probes, to collect objective data from your system during the experiment.</p>
+<h4 id="steady-state-hypothesis">Steady State Hypothesis</h4>
+<p>The steady state hypothesis this experiment tried was “<strong>The app is healthyd</strong>”.</p>
+<h5 id="before-run">Before Run</h5>
+<p>The steady state was verified</p>
+<table>
+<thead>
+<tr class="header">
+<th>Probe</th>
+<th>Tolerance</th>
+<th>Verified</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>app-responds-to-requests</td>
+<td> 200</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>app-responds-to-requests</td>
+<td> 200</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>app-responds-to-requests</td>
+<td> 200</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>app-responds-to-requests</td>
+<td> 200</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>app-responds-to-requests</td>
+<td> 200</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<h5 id="after-run">After Run</h5>
+<p>The steady state was verified</p>
+<table>
+<thead>
+<tr class="header">
+<th>Probe</th>
+<th>Tolerance</th>
+<th>Verified</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>app-responds-to-requests</td>
+<td> 200</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>app-responds-to-requests</td>
+<td> 200</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>app-responds-to-requests</td>
+<td> 200</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>app-responds-to-requests</td>
+<td> 200</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>app-responds-to-requests</td>
+<td> 200</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<h4 id="method">Method</h4>
+<p>The experiment method defines the sequence of activities that help gathering evidence towards, or against, the hypothesis.</p>
+<p>The following activities were conducted as part of the experimental’s method:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>action</td>
+<td> abort-failure</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result">Result</h3>
+<p>The experiment was conducted on Sat, 12 Sep 2020 11:21:51 GMT and lasted roughly 2 seconds.</p>
+<h4 id="action---abort-failure">Action - abort-failure</h4>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Status</strong></td>
+<td>succeeded</td>
+</tr>
+<tr class="even">
+<td><strong>Background</strong></td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td><strong>Started</strong></td>
+<td>Sat, 12 Sep 2020 11:21:52 GMT</td>
+</tr>
+<tr class="even">
+<td><strong>Ended</strong></td>
+<td>Sat, 12 Sep 2020 11:21:52 GMT</td>
+</tr>
+<tr class="odd">
+<td><strong>Duration</strong></td>
+<td>0 seconds</td>
+</tr>
+<tr class="even">
+<td><strong>Paused After</strong></td>
+<td>1s</td>
+</tr>
+</tbody>
+</table>
+<p>The action provider that was executed:</p>
+<table>
+<colgroup>
+<col style="width: 20%"></col>
+<col style="width: 79%"></col>
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Type</strong></td>
+<td>python</td>
+</tr>
+<tr class="even">
+<td><strong>Module</strong></td>
+<td>chaosistio.fault.actions</td>
+</tr>
+<tr class="odd">
+<td><strong>Function</strong></td>
+<td>add_abort_fault</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments</strong></td>
+<td>{‘virtual_service_name’: ‘twflix-microservice’, ‘http_status’: 500, ‘routes’: [{‘destination’: {‘host’: ‘twflix-microservice’, ‘subset’: ‘primary’}}], ‘percentage’: 50, ‘version’: ‘networking.istio.io/v1alpha3’, ‘ns’: ‘twflix-microservice’}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="appendix">Appendix</h3>
+<h4 id="action---abort-failure-1">Action - abort-failure</h4>
+<p>The <em>action</em> returned the following result:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="op">{</span><span class="st">'body'</span><span class="op">:</span> <span class="op">{</span><span class="st">'apiVersion'</span><span class="op">:</span> <span class="st">'networking.istio.io/v1alpha3'</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">          <span class="st">'kind'</span><span class="op">:</span> <span class="st">'VirtualService'</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">          <span class="st">'metadata'</span><span class="op">:</span> <span class="op">{</span><span class="st">'annotations'</span><span class="op">:</span> <span class="op">{</span><span class="st">'kubectl.kubernetes.io/last-applied-configuration'</span><span class="op">:</span> <span class="st">'{&quot;apiVersion&quot;:&quot;networking.istio.io/v1alpha3&quot;,&quot;kind&quot;:&quot;VirtualService&quot;,&quot;metadata&quot;:{&quot;annotations&quot;:{},&quot;name&quot;:&quot;twflix-microservice&quot;,&quot;namespace&quot;:&quot;twflix-microservice&quot;},&quot;spec&quot;:{&quot;hosts&quot;:[&quot;twflix-microservice&quot;],&quot;http&quot;:[{&quot;route&quot;:[{&quot;destination&quot;:{&quot;host&quot;:&quot;twflix-microservice&quot;,&quot;port&quot;:{&quot;number&quot;:80},&quot;subset&quot;:&quot;primary&quot;}}]}]}}</span><span class="sc">\n</span><span class="st">'</span><span class="op">},</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">                       <span class="st">'creationTimestamp'</span><span class="op">:</span> <span class="st">'2020-09-12T10:49:34Z'</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">                       <span class="st">'generation'</span><span class="op">:</span> <span class="dv">8</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">                       <span class="st">'name'</span><span class="op">:</span> <span class="st">'twflix-microservice'</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">                       <span class="st">'namespace'</span><span class="op">:</span> <span class="st">'twflix-microservice'</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">                       <span class="st">'resourceVersion'</span><span class="op">:</span> <span class="st">'368008'</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">                       <span class="st">'selfLink'</span><span class="op">:</span> <span class="st">'/apis/networking.istio.io/v1alpha3/namespaces/twflix-microservice/virtualservices/twflix-microservice'</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">                       <span class="st">'uid'</span><span class="op">:</span> <span class="st">'a01494bf-7a4c-4dbb-8446-c9f3ae38a655'</span><span class="op">},</span></a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">          <span class="st">'spec'</span><span class="op">:</span> <span class="op">{</span><span class="st">'hosts'</span><span class="op">:</span> [<span class="st">'twflix-microservice'</span>]<span class="op">,</span></a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">                   <span class="st">'http'</span><span class="op">:</span> [<span class="op">{</span><span class="st">'fault'</span><span class="op">:</span> <span class="op">{</span><span class="st">'abort'</span><span class="op">:</span> <span class="op">{</span><span class="st">'httpStatus'</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb1-13" data-line-number="13">                                                 <span class="st">'percentage'</span><span class="op">:</span> <span class="op">{</span><span class="st">'value'</span><span class="op">:</span> <span class="dv">50</span><span class="op">}}},</span></a>
+<a class="sourceLine" id="cb1-14" data-line-number="14">                             <span class="st">'route'</span><span class="op">:</span> [<span class="op">{</span><span class="st">'destination'</span><span class="op">:</span> <span class="op">{</span><span class="st">'host'</span><span class="op">:</span> <span class="st">'twflix-microservice'</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb1-15" data-line-number="15">                                                        <span class="st">'port'</span><span class="op">:</span> <span class="op">{</span><span class="st">'number'</span><span class="op">:</span> <span class="dv">80</span><span class="op">},</span></a>
+<a class="sourceLine" id="cb1-16" data-line-number="16">                                                        <span class="st">'subset'</span><span class="op">:</span> <span class="st">'primary'</span><span class="op">}}</span>]<span class="op">}</span>]<span class="op">}},</span></a>
+<a class="sourceLine" id="cb1-17" data-line-number="17"> <span class="st">'headers'</span><span class="op">:</span> <span class="op">{</span><span class="st">'Cache-Control'</span><span class="op">:</span> <span class="st">'no-cache, private'</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb1-18" data-line-number="18">             <span class="st">'Content-Length'</span><span class="op">:</span> <span class="st">'1030'</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb1-19" data-line-number="19">             <span class="st">'Content-Type'</span><span class="op">:</span> <span class="st">'application/json'</span><span class="op">,</span></a>
+<a class="sourceLine" id="cb1-20" data-line-number="20">             <span class="st">'Date'</span><span class="op">:</span> <span class="st">'Sat, 12 Sep 2020 11:21:52 GMT'</span><span class="op">},</span></a>
+<a class="sourceLine" id="cb1-21" data-line-number="21"> <span class="st">'status'</span><span class="op">:</span> <span class="dv">200</span><span class="op">}</span></a></code></pre></div>
+</body>
+</html>

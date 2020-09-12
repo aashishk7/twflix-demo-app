@@ -15,8 +15,8 @@ steady-state-hypothesis:
       func: count_pods
       module: chaosk8s.pod.probes
       arguments:
-        label_selector: app=netflix-demo
-        ns: netflix-demo-chaos-state
+        label_selector: app=twflix-microservice
+        ns: twflix-microservice-chaos-state
 method:
 - type: action
   name: terminate-pod
@@ -25,6 +25,8 @@ method:
     module: chaosk8s.pod.actions
     func: terminate_pods
     arguments:
-      label_selector: app=netflix-demo
+      label_selector: app=twflix-microservice
       rand: true
-      ns: netflix-demo-chaos-state
+      ns: twflix-microservice-chaos-state
+  pauses:
+    after: 15

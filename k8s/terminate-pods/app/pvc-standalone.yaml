@@ -4,9 +4,9 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   labels:
-    app: netflix-demo-db
+    app: twflix-microservice-db
     release: primary
-  name: netflix-demo-db
+  name: twflix-microservice-db
 spec:
   accessModes:
     - "ReadWriteOnce"

@@ -3,12 +3,12 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: netflix-ui
+  name: twflix-ui
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: netflix-ui
+    name: twflix-ui
   minReplicas: 2
   maxReplicas: 6
   metrics:

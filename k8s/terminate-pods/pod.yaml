@@ -3,16 +3,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: netflix-demo
+  name: twflix-microservice
   labels:
-    app: netflix-demo
+    app: twflix-microservice
 spec:
   containers:
-  - name: netflix-demo
+  - name: twflix-microservice
     image: aashishk7/demo-app:0.0.1
     env:
     - name: DB
-      value: netflix-demo-db
+      value: twflix-microservice-db
     ports:
     - containerPort: 8080
     livenessProbe:

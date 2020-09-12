@@ -3,9 +3,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: netflix-demo-db
+  name: twflix-microservice-db
   labels:
-    app: netflix-demo-db
+    app: twflix-microservice-db
     release: primary
 spec:
   type: ClusterIP
@@ -14,5 +14,5 @@ spec:
     port: 27017
     targetPort: mongodb
   selector:
-    app: netflix-demo-db
+    app: twflix-microservice-db
     release: primary

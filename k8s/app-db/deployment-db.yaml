@@ -3,26 +3,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: netflix-demo-db
+  name: twflix-microservice-db
   labels:
-    app: netflix-demo-db
+    app: twflix-microservice-db
     release: primary
 spec:
   selector:
     matchLabels:
-      app: netflix-demo-db
+      app: twflix-microservice-db
       release: primary
   template:
     metadata:
       labels:
-        app: netflix-demo-db
+        app: twflix-microservice-db
         release: primary
     spec:
       securityContext:
         fsGroup: 1001
         runAsUser: 1001
       containers:
-      - name: netflix-demo-db
+      - name: twflix-microservice-db
         image: docker.io/bitnami/mongodb:4.0.3
         imagePullPolicy: "Always"
         env:
@@ -66,4 +66,4 @@ spec:
       volumes:
       - name: data
         persistentVolumeClaim:
-          claimName: netflix-demo-db
+          claimName: twflix-microservice-db
