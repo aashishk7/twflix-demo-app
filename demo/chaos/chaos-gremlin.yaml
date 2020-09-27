@@ -1,6 +1,6 @@
 {
   "title": "Can our system handle a node being CPU-busy?",
-  "description": "CPU-usage may be impactful on our response time",
+  "description": "CPU-usage may be impactful on our response time or may also impact our services/pods",
   "secrets": {
     "gremlin": {
       "email": {
