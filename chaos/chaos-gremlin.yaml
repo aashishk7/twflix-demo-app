@@ -1,0 +1,44 @@
+{
+  "title": "Can our system handle a node being CPU-busy?",
+  "description": "CPU-usage may be impactful on our response time",
+  "secrets": {
+    "gremlin": {
+      "email": {
+        "type": "env",
+        "key": "GREMLIN_EMAIL"
+      },
+      "password": {
+        "type": "env",
+        "key": "GREMLIN_PWD"
+      },
+      "org_name": {
+        "type": "env",
+        "key": "GREMLIN_ORG_NAME"
+      }
+    }
+  },
+  "method": [
+  {
+    "name": "attack-on-cpu",
+    "type": "action",
+    "background": true,
+    "provider": {
+      "type": "python",
+      "module": "chaosgremlin.actions",
+      "func": "attack",
+      "secrets": ["gremlin"],
+      "arguments": {
+        "command": {
+          "type": "cpu"
+        },
+        "target": {
+          "type":"Exact",
+          "target": "Kubernetes",
+          "cluster":"gremlin",
+          "ns": "twflix-microservice"
+        }
+      }
+    }
+  }
+  ]
+}

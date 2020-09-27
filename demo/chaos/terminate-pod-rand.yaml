@@ -16,7 +16,7 @@ steady-state-hypothesis:
       func: all_microservices_healthy
       module: chaosk8s.probes
       arguments:
-        ns: twflix-microservice-chaos-resource-2
+        ns: twflix-microservice-state-2
 method:
 - type: action
   name: terminate-app-pod
@@ -27,6 +27,6 @@ method:
     arguments:
       # label_selector: app=twflix-microservice
       rand: true
-      ns: twflix-microservice-chaos-resource-2
+      ns: twflix-microservice-state-2
   pauses: 
     after: 10

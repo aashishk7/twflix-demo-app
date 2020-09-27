@@ -16,7 +16,7 @@ steady-state-hypothesis:
       module: chaosk8s.pod.probes
       arguments:
         label_selector: app=twflix-microservice
-        ns: twflix-microservice-chaos-resource-1
+        ns: twflix-microservice-state-1
   - name: pod-in-phase
     type: probe
     tolerance: true
@@ -26,7 +26,7 @@ steady-state-hypothesis:
       module: chaosk8s.pod.probes
       arguments:
         label_selector: app=twflix-microservice
-        ns: twflix-microservice-chaos-resource-1
+        ns: twflix-microservice-state-1
         phase: Running
   - name: pod-in-conditions
     type: probe
@@ -37,7 +37,7 @@ steady-state-hypothesis:
       module: chaosk8s.pod.probes
       arguments:
         label_selector: app=twflix-microservice
-        ns: twflix-microservice-chaos-resource-1
+        ns: twflix-microservice-state-1
         conditions:
         - type: Ready
           status: "True"
@@ -51,6 +51,6 @@ method:
     arguments:
       label_selector: app=twflix-microservice
       rand: true
-      ns: twflix-microservice-chaos-resource-1
+      ns: twflix-microservice-state-1
   pauses: 
     after: 15
