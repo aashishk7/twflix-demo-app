@@ -10745,3 +10745,1471 @@
 [36m[2020-09-24 20:02:40 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
 [36m[2020-09-24 20:02:40 DEBUG] [__init__:72][39m Cleaning up controls
 [36m[2020-09-24 20:02:40 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 15:46:30 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 15:46:30 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 15:46:30 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 15:46:32 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 15:46:32 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 15:46:32 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 15:46:32 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[31m[2020-09-27 15:46:32 ERROR] [cli:147][39m Failed parsing YAML experiment: while parsing a flow mapping
+      in "chaos/chaos-gremlin.yaml", line 31, column 20
+    expected ',' or '}', but got '<scalar>'
+      in "chaos/chaos-gremlin.yaml", line 33, column 11
+[36m[2020-09-27 15:46:32 DEBUG] [cli:148][39m Failed parsing YAML experiment: while parsing a flow mapping
+      in "chaos/chaos-gremlin.yaml", line 31, column 20
+    expected ',' or '}', but got '<scalar>'
+      in "chaos/chaos-gremlin.yaml", line 33, column 11
+[36m[2020-09-27 15:47:38 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 15:47:38 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 15:47:38 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 15:47:39 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 15:47:39 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 15:47:39 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 15:47:39 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[31m[2020-09-27 15:47:39 ERROR] [cli:147][39m Failed parsing YAML experiment: while parsing a flow mapping
+      in "chaos/chaos-gremlin.yaml", line 31, column 20
+    expected ',' or '}', but got '<scalar>'
+      in "chaos/chaos-gremlin.yaml", line 33, column 11
+[36m[2020-09-27 15:47:39 DEBUG] [cli:148][39m Failed parsing YAML experiment: while parsing a flow mapping
+      in "chaos/chaos-gremlin.yaml", line 31, column 20
+    expected ',' or '}', but got '<scalar>'
+      in "chaos/chaos-gremlin.yaml", line 33, column 11
+[36m[2020-09-27 15:49:46 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 15:49:46 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 15:49:46 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 15:49:48 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 15:49:48 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 15:49:48 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 15:49:48 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 15:49:48 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 15:49:48 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 15:49:48 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 15:49:48 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 15:49:48 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 15:49:48 DEBUG] [caching:42][39m Clearing activities cache
+[31m[2020-09-27 15:49:48 ERROR] [cli:157][39m Secrets make reference to an environment key that does not exist: GREMLIN_EMAIL
+[36m[2020-09-27 15:49:48 DEBUG] [cli:158][39m Secrets make reference to an environment key that does not exist: GREMLIN_EMAIL
+[36m[2020-09-27 15:50:19 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 15:50:19 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 15:50:19 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 15:50:20 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 15:50:20 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 15:50:20 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 15:50:20 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 15:50:20 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 15:50:20 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 15:50:20 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 15:50:20 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 15:50:20 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 15:50:20 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 15:50:20 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 15:50:20 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 15:50:20 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 15:50:20 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 15:50:20 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 15:50:20 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 15:50:20 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 15:50:20 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 15:50:20 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 15:50:20 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 15:50:20 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 15:50:20 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 15:50:20 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 15:50:20 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 15:50:20 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 15:50:20 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[32m[2020-09-27 15:50:20 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 15:50:20 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 15:50:23 DEBUG] [actions:54][39m attack submitted succesfully: 0de12a8d-00ab-11eb-b6b7-e6923a71bcf0
+[36m[2020-09-27 15:50:23 DEBUG] [activity:179][39m   => succeeded with '0de12a8d-00ab-11eb-b6b7-e6923a71bcf0'
+[36m[2020-09-27 15:50:23 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 15:50:23 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 15:50:23 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 15:50:23 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 15:50:23 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 15:50:23 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 15:50:23 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 15:50:23 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 15:50:23 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 15:50:23 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 15:50:23 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 15:53:48 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 15:53:48 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 15:53:48 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 15:53:49 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 15:53:49 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 15:53:49 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 15:53:49 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 15:53:49 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 15:53:49 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 15:53:49 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 15:53:49 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 15:53:49 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 15:53:49 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 15:53:49 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 15:53:49 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 15:53:49 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 15:53:49 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 15:53:49 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 15:53:49 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 15:53:49 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 15:53:49 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 15:53:49 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 15:53:49 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 15:53:49 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 15:53:49 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 15:53:49 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 15:53:49 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 15:53:49 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2020-09-27 15:53:49 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 15:53:49 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[36m[2020-09-27 15:53:49 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 15:53:52 DEBUG] [actions:54][39m attack submitted succesfully: 8a2fd4ab-00ab-11eb-9c58-326559fc0e49
+[36m[2020-09-27 15:53:52 DEBUG] [activity:179][39m   => succeeded with '8a2fd4ab-00ab-11eb-9c58-326559fc0e49'
+[36m[2020-09-27 15:53:52 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 15:53:52 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 15:53:52 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 15:53:52 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 15:53:52 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 15:53:52 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 15:53:52 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 15:53:52 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 15:53:52 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 15:53:52 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 15:53:52 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:03:18 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:03:18 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:03:18 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:03:20 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:03:20 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:03:20 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:03:20 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:03:20 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:03:20 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:03:20 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:03:20 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:03:20 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:03:20 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:03:20 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:03:20 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:03:20 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:03:20 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:03:20 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:03:20 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:03:20 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:03:20 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:03:20 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:03:20 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:03:20 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:03:20 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:03:20 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:03:20 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:03:20 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:03:20 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[32m[2020-09-27 16:03:20 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:03:20 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:03:23 DEBUG] [activity:233][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/activity.py", line 226, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[31m[2020-09-27 16:03:23 ERROR] [activity:187][39m   => failed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[36m[2020-09-27 16:03:23 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:03:23 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:03:23 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:03:23 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:03:23 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:03:23 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:03:23 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:03:23 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:03:23 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:03:23 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:03:23 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:04:46 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:04:46 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:04:46 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:04:49 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:04:49 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:04:49 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:04:49 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:04:49 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:04:49 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:04:49 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:04:49 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:04:49 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:04:49 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:04:49 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:04:49 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:04:49 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:04:49 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:04:49 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:04:49 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:04:49 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:04:49 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:04:49 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:04:49 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:04:49 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:04:49 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:04:49 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:04:49 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:04:49 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2020-09-27 16:04:49 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:04:49 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[36m[2020-09-27 16:04:49 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:04:52 DEBUG] [activity:233][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Gremlin attack failed: Exact is not a list
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/activity.py", line 226, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: Exact is not a list
+[31m[2020-09-27 16:04:52 ERROR] [activity:187][39m   => failed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: Exact is not a list
+[36m[2020-09-27 16:04:52 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:04:52 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:04:52 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:04:52 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:04:52 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:04:52 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:04:52 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:04:52 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:04:52 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:04:52 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:04:52 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:05:17 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:05:17 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:05:17 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:05:18 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:05:18 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:05:18 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:05:18 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:05:18 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:05:18 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:05:18 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:05:18 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:05:18 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:05:18 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:05:18 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:05:18 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:05:18 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:05:18 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:05:18 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:05:18 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:05:18 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:05:18 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:05:18 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:05:18 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:05:18 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:05:18 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:05:18 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:05:18 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:05:18 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:05:18 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[32m[2020-09-27 16:05:18 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:05:18 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:05:21 DEBUG] [activity:233][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/activity.py", line 226, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[31m[2020-09-27 16:05:21 ERROR] [activity:187][39m   => failed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[36m[2020-09-27 16:05:21 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:05:21 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:05:21 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:05:21 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:05:21 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:05:21 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:05:21 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:05:21 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:05:21 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:05:21 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:05:21 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:07:33 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:07:33 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:07:33 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:07:34 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:07:34 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:07:34 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:07:34 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[31m[2020-09-27 16:07:34 ERROR] [cli:147][39m Failed parsing YAML experiment: while parsing a flow mapping
+      in "chaos/chaos-gremlin.yaml", line 25, column 17
+    expected ',' or '}', but got ':'
+      in "chaos/chaos-gremlin.yaml", line 30, column 16
+[36m[2020-09-27 16:07:34 DEBUG] [cli:148][39m Failed parsing YAML experiment: while parsing a flow mapping
+      in "chaos/chaos-gremlin.yaml", line 25, column 17
+    expected ',' or '}', but got ':'
+      in "chaos/chaos-gremlin.yaml", line 30, column 16
+[36m[2020-09-27 16:07:48 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:07:48 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:07:48 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:07:50 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:07:50 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:07:50 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:07:50 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:07:50 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:07:50 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:07:50 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:07:50 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:07:50 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:07:50 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:07:50 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:07:50 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:07:50 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:07:50 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:07:50 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:07:50 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:07:50 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:07:50 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:07:50 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:07:50 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:07:50 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:07:50 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:07:50 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:07:50 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:07:50 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2020-09-27 16:07:50 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:07:50 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[36m[2020-09-27 16:07:50 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:07:52 DEBUG] [activity:233][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/activity.py", line 226, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[31m[2020-09-27 16:07:52 ERROR] [activity:187][39m   => failed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[36m[2020-09-27 16:07:52 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:07:52 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:07:52 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:07:52 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:07:52 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:07:52 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:07:52 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:07:52 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:07:52 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:07:52 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:07:52 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:08:05 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:08:05 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:08:05 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:08:07 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:08:07 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:08:07 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:08:07 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:08:07 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:08:07 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:08:07 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:08:07 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:08:07 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:08:07 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:08:07 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:08:07 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:08:07 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:08:07 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:08:07 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:08:07 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:08:07 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:08:07 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:08:07 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:08:07 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:08:07 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:08:07 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:08:07 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:08:07 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:08:07 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2020-09-27 16:08:07 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:08:07 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[36m[2020-09-27 16:08:07 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:08:10 DEBUG] [activity:233][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Gremlin attack failed: targetStrategy must be one of the following: Exact, Regex, Random
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/activity.py", line 226, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: targetStrategy must be one of the following: Exact, Regex, Random
+[31m[2020-09-27 16:08:10 ERROR] [activity:187][39m   => failed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: targetStrategy must be one of the following: Exact, Regex, Random
+[36m[2020-09-27 16:08:10 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:08:10 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:08:10 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:08:10 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:08:10 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:08:10 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:08:10 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:08:10 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:08:10 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:08:10 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:08:10 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:10:04 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:10:04 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:10:04 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:10:05 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:10:05 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:10:05 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:10:05 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:10:05 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:10:05 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:10:05 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:10:05 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:10:05 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:10:05 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:10:05 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:10:05 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:10:05 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:10:05 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:10:05 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:10:05 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:10:05 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:10:05 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:10:05 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:10:05 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:10:05 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:10:05 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:10:05 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:10:05 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:10:05 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2020-09-27 16:10:05 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:10:05 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[36m[2020-09-27 16:10:05 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:10:08 DEBUG] [activity:233][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/activity.py", line 226, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[31m[2020-09-27 16:10:08 ERROR] [activity:187][39m   => failed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[36m[2020-09-27 16:10:08 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:10:08 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:10:08 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:10:08 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:10:08 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:10:08 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:10:08 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:10:08 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:10:08 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:10:08 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:10:08 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:11:58 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:11:58 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:11:58 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:11:59 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:11:59 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:11:59 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:11:59 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:11:59 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:11:59 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:11:59 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:11:59 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:11:59 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:11:59 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:11:59 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:11:59 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:11:59 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:11:59 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:11:59 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:11:59 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:11:59 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:11:59 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:11:59 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:11:59 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:11:59 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:11:59 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:11:59 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:11:59 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:11:59 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:11:59 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[32m[2020-09-27 16:11:59 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:11:59 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:12:02 DEBUG] [actions:54][39m attack submitted succesfully: 1421a1b5-00ae-11eb-8713-6e76925b41a8
+[36m[2020-09-27 16:12:02 DEBUG] [activity:179][39m   => succeeded with '1421a1b5-00ae-11eb-8713-6e76925b41a8'
+[36m[2020-09-27 16:12:02 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:12:02 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:12:02 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:12:02 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:12:02 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:12:02 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:12:02 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:12:02 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:12:02 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:12:02 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:12:02 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:13:45 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:13:45 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:13:45 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:13:46 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:13:46 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:13:46 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:13:46 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:13:46 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:13:46 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:13:46 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:13:46 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:13:46 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:13:46 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:13:46 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:13:46 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:13:46 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:13:46 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:13:46 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:13:46 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:13:46 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:13:46 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:13:46 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:13:46 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:13:46 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:13:46 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:13:46 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:13:46 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:13:46 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:13:46 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[32m[2020-09-27 16:13:46 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:13:46 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:13:49 DEBUG] [activity:233][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Gremlin attack failed: targetStrategy must be one of the following: Exact, Regex, Random
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/activity.py", line 226, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: targetStrategy must be one of the following: Exact, Regex, Random
+[31m[2020-09-27 16:13:49 ERROR] [activity:187][39m   => failed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: targetStrategy must be one of the following: Exact, Regex, Random
+[36m[2020-09-27 16:13:49 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:13:49 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:13:49 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:13:49 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:13:49 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:13:49 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:13:49 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:13:49 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:13:49 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:13:49 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:13:49 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:14:54 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:14:54 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:14:54 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:14:55 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:14:55 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:14:55 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:14:55 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:14:55 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:14:55 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:14:55 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:14:55 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:14:55 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:14:55 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:14:55 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:14:55 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:14:55 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:14:55 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:14:55 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:14:55 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:14:55 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:14:55 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:14:55 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:14:55 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:14:55 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:14:55 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:14:55 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:14:55 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:14:55 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2020-09-27 16:14:55 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:14:55 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:14:55 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[36m[2020-09-27 16:15:03 DEBUG] [activity:233][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/activity.py", line 226, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[31m[2020-09-27 16:15:03 ERROR] [activity:187][39m   => failed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[36m[2020-09-27 16:15:03 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:15:03 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:15:03 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:15:03 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:15:03 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:15:03 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:15:03 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:15:03 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:15:03 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:15:03 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:15:03 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:15:38 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:15:38 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:15:38 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:15:39 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:15:39 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:15:39 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:15:39 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:15:39 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:15:39 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:15:39 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:15:39 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:15:39 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:15:39 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:15:39 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:15:39 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:15:39 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:15:39 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:15:39 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:15:39 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:15:39 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:15:39 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:15:39 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:15:39 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:15:39 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:15:39 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:15:39 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:15:39 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:15:39 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:15:39 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[32m[2020-09-27 16:15:39 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:15:39 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:15:42 DEBUG] [activity:233][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/activity.py", line 226, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[31m[2020-09-27 16:15:42 ERROR] [activity:187][39m   => failed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[36m[2020-09-27 16:15:42 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:15:42 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:15:42 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:15:42 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:15:42 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:15:42 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:15:42 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:15:42 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:15:42 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:15:42 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:15:42 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:16:00 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:16:00 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:16:00 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:16:02 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:16:02 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:16:02 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:16:02 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:16:02 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:16:02 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:16:02 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:16:02 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:16:02 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:16:02 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:16:02 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:16:02 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:16:02 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:16:02 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:16:02 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:16:02 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:16:02 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:16:02 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:16:02 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:16:02 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:16:02 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:16:02 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:16:02 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:16:02 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:16:02 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:16:02 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[32m[2020-09-27 16:16:02 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:16:02 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:16:05 DEBUG] [actions:54][39m attack submitted succesfully: a4bb2675-00ae-11eb-b123-ae4bfdc7ae2b
+[36m[2020-09-27 16:16:05 DEBUG] [activity:179][39m   => succeeded with 'a4bb2675-00ae-11eb-b123-ae4bfdc7ae2b'
+[36m[2020-09-27 16:16:05 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:16:05 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:16:05 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:16:05 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:16:05 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:16:05 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:16:05 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:16:05 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:16:05 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:16:05 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:16:05 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:16:45 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:16:45 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:16:45 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:16:47 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:16:47 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:16:47 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:16:47 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:16:47 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:16:47 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:16:47 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:16:47 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:16:47 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:16:47 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:16:47 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:16:47 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:16:47 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:16:47 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:16:47 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:16:47 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:16:47 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:16:47 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:16:47 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:16:47 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:16:47 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:16:47 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:16:47 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:16:47 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:16:47 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2020-09-27 16:16:47 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:16:47 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[36m[2020-09-27 16:16:47 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:16:50 DEBUG] [activity:233][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Gremlin attack failed: Regex must be provided
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/activity.py", line 226, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: Regex must be provided
+[31m[2020-09-27 16:16:50 ERROR] [activity:187][39m   => failed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: Regex must be provided
+[36m[2020-09-27 16:16:50 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:16:50 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:16:50 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:16:50 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:16:50 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:16:50 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:16:50 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:16:50 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:16:50 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:16:50 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:16:50 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:19:48 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:19:48 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:19:48 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:19:49 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:19:49 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:19:49 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:19:49 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:19:49 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:19:49 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:19:49 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:19:49 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:19:49 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:19:49 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:19:49 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:19:49 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:19:49 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:19:49 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:19:49 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:19:49 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:19:49 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:19:49 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:19:49 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:19:49 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:19:49 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:19:49 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:19:49 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:19:49 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:19:49 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:19:49 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[32m[2020-09-27 16:19:49 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:19:49 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:19:52 DEBUG] [activity:233][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/activity.py", line 226, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[31m[2020-09-27 16:19:52 ERROR] [activity:187][39m   => failed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[36m[2020-09-27 16:19:52 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:19:52 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:19:52 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:19:52 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:19:52 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:19:52 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:19:52 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:19:52 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:19:52 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:19:52 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:19:52 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:21:10 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:21:10 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:21:10 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:21:11 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:21:11 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:21:11 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:21:11 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:21:11 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:21:11 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:21:11 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:21:11 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:21:11 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:21:11 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:21:11 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:21:11 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:21:11 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:21:11 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:21:11 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:21:11 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:21:11 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:21:11 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:21:11 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:21:11 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:21:11 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:21:11 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:21:11 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:21:11 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:21:11 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2020-09-27 16:21:11 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:21:11 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[36m[2020-09-27 16:21:11 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:21:15 DEBUG] [activity:233][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/activity.py", line 226, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[31m[2020-09-27 16:21:15 ERROR] [activity:187][39m   => failed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: At least one target must be specified
+[36m[2020-09-27 16:21:15 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:21:15 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:21:15 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:21:15 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:21:15 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:21:15 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:21:15 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:21:15 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:21:15 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:21:15 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:21:15 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:24:24 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:24:24 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:24:24 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:24:26 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:24:26 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:24:26 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:24:26 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:24:26 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:24:26 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:24:26 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:24:26 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:24:26 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:24:26 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:24:26 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:24:26 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:24:26 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:24:26 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:24:26 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:24:26 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:24:26 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:24:26 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:24:26 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:24:26 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:24:26 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:24:26 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:24:26 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:24:26 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:24:26 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:24:26 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[32m[2020-09-27 16:24:26 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:24:26 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:24:29 DEBUG] [actions:54][39m attack submitted succesfully: d10c8f32-00af-11eb-977f-02b0c1fd30ec
+[36m[2020-09-27 16:24:29 DEBUG] [activity:179][39m   => succeeded with 'd10c8f32-00af-11eb-977f-02b0c1fd30ec'
+[36m[2020-09-27 16:24:29 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:24:29 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:24:29 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:24:29 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:24:29 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:24:29 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:24:29 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:24:29 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:24:29 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:24:29 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:24:29 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:29:48 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:29:48 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:29:48 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[36m[2020-09-27 16:29:50 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:29:50 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:29:50 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:29:50 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:29:50 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:29:50 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:29:50 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:29:50 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:29:50 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:29:50 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:29:50 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:29:50 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:29:50 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:29:50 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:29:50 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:29:50 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:29:50 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:29:50 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:29:50 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:29:50 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:29:50 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:29:50 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:29:50 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:29:50 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:29:50 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[32m[2020-09-27 16:29:50 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:29:50 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:29:53 DEBUG] [actions:54][39m attack submitted succesfully: 924854d5-00b0-11eb-8030-3e71f3572157
+[36m[2020-09-27 16:29:53 DEBUG] [activity:179][39m   => succeeded with '924854d5-00b0-11eb-8030-3e71f3572157'
+[36m[2020-09-27 16:29:53 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:29:53 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:29:53 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:29:53 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:29:53 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:29:53 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:29:53 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:29:53 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:29:53 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:29:53 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:29:53 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:34:32 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:34:32 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:34:32 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:34:33 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:34:33 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:34:33 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:34:33 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:34:33 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:34:33 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:34:33 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:34:33 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:34:33 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:34:33 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:34:33 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:34:33 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:34:33 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:34:33 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:34:33 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:34:33 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:34:33 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:34:33 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:34:33 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:34:33 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:34:33 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:34:33 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:34:33 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:34:33 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:34:33 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2020-09-27 16:34:33 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:34:33 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[36m[2020-09-27 16:34:33 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:34:37 DEBUG] [activity:233][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Gremlin attack failed: Insufficient clients to target. Expected at least 1, found 0
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/activity.py", line 226, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: Insufficient clients to target. Expected at least 1, found 0
+[31m[2020-09-27 16:34:37 ERROR] [activity:187][39m   => failed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: Insufficient clients to target. Expected at least 1, found 0
+[36m[2020-09-27 16:34:37 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:34:37 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:34:37 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:34:37 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:34:37 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:34:37 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:34:37 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:34:37 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:34:37 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:34:37 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:34:37 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:35:15 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:35:15 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:35:15 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:35:17 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:35:17 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:35:17 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:35:17 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:35:17 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:35:17 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:35:17 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:35:17 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:35:17 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:35:17 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:35:17 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:35:17 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:35:17 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:35:17 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:35:17 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:35:17 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:35:17 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:35:17 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:35:17 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:35:17 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:35:17 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:35:17 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:35:17 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:35:17 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:35:17 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:35:17 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[32m[2020-09-27 16:35:17 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:35:17 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:35:19 DEBUG] [activity:233][39m Activity failed
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Gremlin attack failed: Insufficient clients to target. Expected at least 1, found 0
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/activity.py", line 226, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaoslib/provider/python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py", line 50, in attack
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: Insufficient clients to target. Expected at least 1, found 0
+[31m[2020-09-27 16:35:20 ERROR] [activity:187][39m   => failed: chaoslib.exceptions.ActivityFailed: Gremlin attack failed: Insufficient clients to target. Expected at least 1, found 0
+[36m[2020-09-27 16:35:20 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:35:20 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:35:20 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:35:20 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:35:20 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:35:20 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:35:20 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:35:20 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:35:20 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:35:20 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:35:20 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:36:43 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:36:43 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:36:43 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:36:44 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:36:44 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:36:44 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:36:44 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:36:44 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:36:44 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:36:44 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:36:44 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:36:44 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:36:44 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:36:44 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:36:44 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:36:44 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:36:44 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:36:44 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:36:44 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:36:44 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:36:44 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:36:44 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:36:44 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:36:44 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:36:44 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:36:44 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:36:44 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:36:44 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2020-09-27 16:36:44 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:36:44 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[36m[2020-09-27 16:36:44 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:36:48 DEBUG] [actions:54][39m attack submitted succesfully: 896f82d9-00b1-11eb-9c28-121ba0b02211
+[36m[2020-09-27 16:36:48 DEBUG] [activity:179][39m   => succeeded with '896f82d9-00b1-11eb-9c28-121ba0b02211'
+[36m[2020-09-27 16:36:48 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:36:48 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:36:48 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:36:48 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:36:48 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:36:48 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:36:48 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:36:48 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:36:48 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:36:48 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:36:48 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:41:04 DEBUG] [cli:73][39m ###############################################################################
+[36m[2020-09-27 16:41:04 DEBUG] [cli:74][39m Running command 'run'
+[36m[2020-09-27 16:41:04 DEBUG] [cli:78][39m Using settings file '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'
+[33m[2020-09-27 16:41:06 WARNING] [check:30][39m 
+    There is a new version (1.7.0) of the chaostoolkit available.
+    You may upgrade by typing:
+    
+    $ pip install -U chaostoolkit
+    
+    Please review changes at https://github.com/chaostoolkit/chaostoolkit/blob/master/CHANGELOG.md
+    
+[36m[2020-09-27 16:41:06 DEBUG] [settings:26][39m The Chaos Toolkit settings file could not be found at '/Users/aashish.khetarpal/.chaostoolkit/settings.yaml'.
+[36m[2020-09-27 16:41:06 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:41:06 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2020-09-27 16:41:06 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:41:06 DEBUG] [caching:35][39m Cached 1 activities
+[32m[2020-09-27 16:41:06 INFO] [experiment:54][39m Validating the experiment's syntax
+[36m[2020-09-27 16:41:06 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:41:06 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:41:06 DEBUG] [secret:89][39m Secrets loaded
+[32m[2020-09-27 16:41:06 INFO] [experiment:103][39m Experiment looks valid
+[36m[2020-09-27 16:41:06 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2020-09-27 16:41:06 DEBUG] [caching:25][39m Building activity cache...
+[36m[2020-09-27 16:41:06 DEBUG] [caching:35][39m Cached 1 activities
+[36m[2020-09-27 16:41:06 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2020-09-27 16:41:06 DEBUG] [secret:74][39m Loading secrets...
+[36m[2020-09-27 16:41:06 DEBUG] [secret:89][39m Secrets loaded
+[36m[2020-09-27 16:41:06 DEBUG] [__init__:39][39m Initializing controls
+[36m[2020-09-27 16:41:06 DEBUG] [experiment:139][39m 1 activities will be run in the background
+[32m[2020-09-27 16:41:06 INFO] [experiment:199][39m Running experiment: Can our system handle a node being CPU-busy?
+[36m[2020-09-27 16:41:06 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[32m[2020-09-27 16:41:06 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[36m[2020-09-27 16:41:06 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2020-09-27 16:41:06 DEBUG] [activity:117][39m activity will run in the background
+[36m[2020-09-27 16:41:06 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:41:06 DEBUG] [experiment:337][39m Waiting for background activities to complete...
+[32m[2020-09-27 16:41:06 INFO] [activity:157][39m Action: attack-on-cpu [in background]
+[36m[2020-09-27 16:41:06 DEBUG] [python:34][39m Activity 'attack-on-cpu' loaded from '/Users/aashish.khetarpal/env/lib/python3.8/site-packages/chaosgremlin/actions.py'
+[36m[2020-09-27 16:41:09 DEBUG] [actions:54][39m attack submitted succesfully: 251ae41a-00b2-11eb-977f-02b0c1fd30ec
+[36m[2020-09-27 16:41:09 DEBUG] [activity:179][39m   => succeeded with '251ae41a-00b2-11eb-977f-02b0c1fd30ec'
+[36m[2020-09-27 16:41:09 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2020-09-27 16:41:09 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[32m[2020-09-27 16:41:09 INFO] [hypothesis:180][39m No steady state hypothesis defined. That's ok, just exploring.
+[32m[2020-09-27 16:41:09 INFO] [experiment:357][39m Let's rollback...
+[36m[2020-09-27 16:41:09 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:41:09 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2020-09-27 16:41:09 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2020-09-27 16:41:09 INFO] [experiment:306][39m Experiment ended with status: completed
+[36m[2020-09-27 16:41:09 DEBUG] [__init__:355][39m No controls to apply on 'experiment'
+[36m[2020-09-27 16:41:09 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2020-09-27 16:41:09 DEBUG] [caching:42][39m Clearing activities cache

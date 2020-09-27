@@ -26,19 +26,19 @@
       "type": "python",
       "module": "chaosgremlin.actions",
       "func": "attack",
+      "background": true,
       "secrets": ["gremlin"],
       "arguments": {
         "command": {
-          "type": "cpu"
+          "type": "cpu",
+          "length": "60"
         },
         "target": {
           "type":"Exact",
-          "target": "Kubernetes",
-          "cluster":"gremlin",
-          "ns": "twflix-microservice"
+          "exact":["docker-desktop"],
+        }
         }
       }
     }
-  }
   ]
 }
